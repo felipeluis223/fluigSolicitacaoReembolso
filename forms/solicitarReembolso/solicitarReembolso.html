@@ -73,7 +73,7 @@
 	<div class="panel-body">
 		<span class="">Revise os dados da solicitação, valide os comprovantes e autorize o pagamento conforme as diretrizes financeiras.</span>
 
-		<!-- Etapa do Solicitante -->
+		<!-- Etapa do Financeiro -->
 		<section class="row form-group fs-xl-margin-top">
 			<!-- 1º Linha -->
 			<div class="col-md-2">
@@ -92,7 +92,6 @@
 			<div class="col-md-3">
 				<label>Reembolso:</label>
 				<div class="fs-display-flex fs-flex-direction-row fs-md-gap">
-					
 					<div class="custom-radio custom-radio-danger">
 						<input type="radio" name="radioTypes" value="danger" id="radioDanger">
 						<label for="radioDanger">Reprovado</label>
@@ -101,8 +100,15 @@
 						<input type="radio" name="radioTypes" value="success" id="radioSuccess">
 						<label for="radioSuccess">Aprovado</label>
 					</div>
-
 				</div>
+			</div>
+		</section>
+
+		<section class="row form-group" style="display: none;">
+			<!-- 2º Linha -->
+			<div class="col-md-12">
+				<label for="justificativaFinanceiro">Justificativa:</label>
+				<textarea class="form-control" id="justificativaFinanceiro" name="justificativaFinanceiro" rows="2"></textarea>				
 			</div>
 		</section>
 	</div>
