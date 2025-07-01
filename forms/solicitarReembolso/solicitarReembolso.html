@@ -25,14 +25,25 @@
 					<input class="form-control" type="text" id="idSolicitante" name="idSolicitante" mask="000.000.000-00" placeholder="Ex.: 000.000.000-00">
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<label for="nomeSolicitante">Nome completo do solicitante:</label>
 					<input class="form-control" type="text" id="nomeSolicitante" name="nomeSolicitante" placeholder="Ex.: João Silva Santos">
+				</div>
+
+				<div class="col-md-3">
+					<label for="centroCusto">Valor R$:</label>
+					<input class="form-control" type="text" id="valor" name="valor" placeholder="Ex.: 1.000,00" mask="#00.000.000.000.000,00">
 				</div>
 
 				<div class="col-md-2">
 					<label for="centroCusto">Centro de custo:</label>
 					<select class="form-control" id="centroCusto" name="centroCusto" dataset="dsCentroCusto" datasetKey="Id" datasetValue="Descricao"></select>
+				</div>
+
+				<div class="col-md-2">
+					<label for="centroCusto">Data da Despesa:</label>
+					<input class="form-control" type="date" id="dataDespesa" name="dataDespesa" placeholder="Ex.: 01/01/2025">
+
 				</div>
 
 			</section>
