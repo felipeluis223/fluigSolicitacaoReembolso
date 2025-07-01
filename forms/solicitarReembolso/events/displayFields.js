@@ -2,7 +2,12 @@ function displayFields(form,customHTML){
 	var user = form.getValue("WKUser");
     var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", user, user,  ConstraintType.MUST) ];
     var groupDataset = DatasetFactory.getDataset("colleagueGroup", null, constraints, null);
-    var groups = ["grpColaborador", "grpFinanceiro"]; // Grupos envolvidos no processo.
+    
+    // Grupos envolvidos no processo:
+    var groups = [
+        "grpColaborador", // MariaTeste
+        "grpFinanceiro"   //JanainaTeste e CassandraTeste
+    ];
 
     // Percorrer os grupos do usuário:
     var userGroup = {};
@@ -32,10 +37,23 @@ function displayFields(form,customHTML){
 
         form.setValue("nomeSolicitante", user);
         form.setEnabled("nomeSolicitante", false);
+
+        form.setEnabled("valor", true);
+        form.setEnabled("centroCusto", true);
+        form.setEnabled("dataDespesa", true);
+        form.setEnabled("justificativa", true);
+        form.setEnabled("anexoDespesas", true);
     }
 
     // Habilitando os campos necessários para a etapa do financeiro:
     if("grpFinanceiro" in userGroup){
         user = getValue("WKUser");
+
+        form.setEnabled("idFinanceiro", true);
+        form.setEnabled("nomeFinanceiro", true);
+
+        form.setEnabled("dataFinanceiro", true);
+        form.setEnabled("radioTypesFinanceiro", true);
+        form.setEnabled("justificativaFinanceiro", true);
     }
 }
