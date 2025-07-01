@@ -65,54 +65,51 @@
 		</div>
 	</div>
 
+	<!-- Etapa do Financeiro -->
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h2 class="panel-title">Análise - Financeiro</h2>
 		</div>
-
-	<div class="panel-body">
-		<span class="">Revise os dados da solicitação, valide os comprovantes e autorize o pagamento conforme as diretrizes financeiras.</span>
-
-		<!-- Etapa do Financeiro -->
-		<section class="row form-group fs-xl-margin-top">
-			<!-- 1º Linha -->
-			<div class="col-md-2">
-				<label for="idFinanceiro">ID do responsável:</label>
-				<input class="form-control" type="text" id="idFinanceiro" name="idFinanceiro" mask="000.000.000-00" placeholder="Ex.: 000.000.000-00">
-			</div>
-			<div class="col-md-3">
-				<label for="nomeFinanceiro">Nome completo do responsável:</label>
-				<input class="form-control" type="text" id="nomeFinanceiro" name="nomeFinanceiro" placeholder="Ex.: Maria Eduarda Silva">
-			</div>
-			<div class="col-md-2">
-				<label for="dataFinanceiro">Data da validação:</label>
-				<input class="form-control" type="date" id="dataFinanceiro" name="dataFinanceiro">
-			</div>
-
-			<div class="col-md-3">
-				<label>Reembolso:</label>
-				<div class="fs-display-flex fs-flex-direction-row fs-md-gap">
-					<div class="custom-radio custom-radio-danger">
-						<input type="radio" name="radioTypes" value="danger" id="radioDanger">
-						<label for="radioDanger">Reprovado</label>
-					</div>
-					<div class="custom-radio custom-radio-success">
-						<input type="radio" name="radioTypes" value="success" id="radioSuccess">
-						<label for="radioSuccess">Aprovado</label>
+		<div class="panel-body">
+			<span class="">Revise os dados da solicitação, valide os comprovantes e autorize o pagamento conforme as diretrizes financeiras.</span>
+			<section class="row form-group fs-xl-margin-top">
+				<!-- 1º Linha -->
+				<div class="col-md-2">
+					<label for="idFinanceiro">ID do responsável:</label>
+					<input class="form-control" type="text" id="idFinanceiro" name="idFinanceiro" mask="000.000.000-00" placeholder="Ex.: 000.000.000-00">
+				</div>
+				<div class="col-md-3">
+					<label for="nomeFinanceiro">Nome completo do responsável:</label>
+					<input class="form-control" type="text" id="nomeFinanceiro" name="nomeFinanceiro" placeholder="Ex.: Maria Eduarda Silva">
+				</div>
+				<div class="col-md-2">
+					<label for="dataFinanceiro">Data da validação:</label>
+					<input class="form-control" type="date" id="dataFinanceiro" name="dataFinanceiro">
+				</div>
+				<div class="col-md-3">
+					<label>Reembolso:</label>
+					<div class="fs-display-flex fs-flex-direction-row fs-md-gap">
+						<div class="custom-radio custom-radio-danger">
+							<input type="radio" name="radioTypes" value="danger" id="radioDanger">
+							<label for="radioDanger">Reprovado</label>
+						</div>
+						<div class="custom-radio custom-radio-success">
+							<input type="radio" name="radioTypes" value="success" id="radioSuccess">
+							<label for="radioSuccess">Aprovado</label>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="row form-group" style="display: none;">
 			<!-- 2º Linha -->
-			<div class="col-md-12">
-				<label for="justificativaFinanceiro">Justificativa:</label>
-				<textarea class="form-control" id="justificativaFinanceiro" name="justificativaFinanceiro" rows="2"></textarea>				
-			</div>
-		</section>
+			<section class="row form-group" style="display: none;">
+				<div class="col-md-12">
+					<label for="justificativaFinanceiro">Justificativa:</label>
+					<textarea class="form-control" id="justificativaFinanceiro" name="justificativaFinanceiro" rows="2"></textarea>				
+				</div>
+			</section>
+		</div>
 	</div>
-
 </form>
 </div>
 </body>
