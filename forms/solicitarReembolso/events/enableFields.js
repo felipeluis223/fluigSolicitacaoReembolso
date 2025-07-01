@@ -13,7 +13,8 @@ function enableFields(form){
         "nomeFinanceiro",
         "dataFinanceiro",
         "radioTypesFinanceiro",
-        "justificativaFinanceiro"
+        "justificativaFinanceiro",
+        "anexoComprovantePG"
     ];
     
     for (var i = 0; i < allFields.length; i++) {

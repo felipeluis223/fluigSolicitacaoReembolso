@@ -6,7 +6,8 @@ function displayFields(form,customHTML){
     // Grupos envolvidos no processo:
     var groups = [
         "grpColaborador", // MariaTeste
-        "grpFinanceiro"   //JanainaTeste e CassandraTeste
+        "grpCentroCusto", // FelipeTeste
+        "grpFinanceiro"   // JanainaTeste e CassandraTeste
     ];
 
     // Percorrer os grupos do usuário:
@@ -55,5 +56,6 @@ function displayFields(form,customHTML){
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypesFinanceiro", true);
         form.setEnabled("justificativaFinanceiro", true);
+        form.setEnabled("anexoComprovantePG", true);
     }
 }
