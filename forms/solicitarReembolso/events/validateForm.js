@@ -57,9 +57,5 @@ function validateForm(form){
         if(form.getValue("anexoComprovantePG") == ""){
             throw('Informação inválida: é necessário preencher o "Anexo do comprovante".');
         }
-        // if(form.getValue("radioTypesFinanceiro") == "danger"){
-        //     // if(form.getValue("justificativaFinanceiro") == ""){}
-
-        // }
     }
 }
