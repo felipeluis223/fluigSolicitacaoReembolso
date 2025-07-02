@@ -168,6 +168,40 @@
 			
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function () {
+
+		function toggleJustificativaFinanceiro() {
+			const selected = $('input[name=radioTypesFinanceiro]:checked').val();
+			if (selected === 'danger') {
+				$('#justificativaFinanceiro').closest('section').show();
+			} else {
+				$('#justificativaFinanceiro').closest('section').hide();
+			}
+		}
+
+		function toggleJustificativaCentroCusto() {
+			const selected = $('input[name=radioTypesCentroCusto]:checked').val();
+			if (selected === 'danger') {
+				$('#justificativaCentroCusto').closest('section').show();
+			} else {
+				$('#justificativaCentroCusto').closest('section').hide();
+			}
+		}
+
+		// Executa ao carregar
+		toggleJustificativaFinanceiro();
+		toggleJustificativaCentroCusto();
+
+		// Eventos
+		$('input[name=radioTypesFinanceiro]').on('change', toggleJustificativaFinanceiro);
+		$('input[name=radioTypesCentroCusto]').on('change', toggleJustificativaCentroCusto);
+
+	});
+
+	</script>
+
 </form>
 </div>
 </body>

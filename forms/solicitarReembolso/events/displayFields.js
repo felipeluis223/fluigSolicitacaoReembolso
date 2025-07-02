@@ -31,12 +31,12 @@ function displayFields(form, customHTML) {
         "dataCentroCusto", // CHECK
         "radioTypesCentroCusto", // CHECK
         "justificativaCentroCusto", // OPCIONAL
-        "idFinanceiro",
-        "nomeFinanceiro",
-        "dataFinanceiro",
-        "radioTypesFinanceiro",
-        "justificativaFinanceiro",
-        "anexoComprovantePG"
+        "idFinanceiro",    // CHECK
+        "nomeFinanceiro",  // CHECK
+        "dataFinanceiro",  // CHECK
+        "radioTypesFinanceiro", // CHECK
+        "justificativaFinanceiro", // CHECK
+        "anexoComprovantePG" // CHECK
     ];
     
     for (var i = 0; i < allFields.length; i++) {
