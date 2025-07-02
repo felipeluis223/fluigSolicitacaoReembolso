@@ -20,4 +20,4 @@ function enableFields(form){
     for (var i = 0; i < allFields.length; i++) {
         form.setEnabled(allFields[i], false);
     }
- }
+}

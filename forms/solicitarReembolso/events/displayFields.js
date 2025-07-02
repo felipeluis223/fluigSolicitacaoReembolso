@@ -30,21 +30,20 @@ function displayFields(form, customHTML) {
     // Etapa: Colaborador
     if ("grpColaboradores" in userGroup) {
         log.info("CHECKDATA 3 - Colaborador");
-        log.info("HTML");
-        log.info("=================");
-        log.info(form);
-        log.info("=================");
-        form.setValue("idSolicitante", user);
-        form.setEnabled("idSolicitante", true);
-
-        form.setValue("nomeSolicitante", user);
-        form.setEnabled("nomeSolicitante", true);
+        
+        // form.setValue("idSolicitante", user);        
+        // form.setEnabled("idSolicitante", true);
+        
+        
+        // form.setValue("nomeSolicitante", user);
+        // form.setEnabled("nomeSolicitante", true);
 
         form.setEnabled("valor", true);
         form.setEnabled("centroCusto", true);
         form.setEnabled("dataDespesa", true);
         form.setEnabled("justificativa", true);
         form.setEnabled("anexoDespesas", true);
+        log.info("CHECKDATA 3 - Colaborador - FIM");
     }
 
     // Etapa: Financeiro
