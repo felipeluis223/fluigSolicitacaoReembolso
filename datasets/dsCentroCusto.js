@@ -5,11 +5,11 @@ function createDataset(fields, constraints, sortFields) {
     
     var data = [
         ["1001", "Administrativo"],
-        ["1001", "Financeiro"],
-        ["1001", "Manutenção"],
-        ["1001", "Produção"],
-        ["1001", "TI"],
-        ["1001", "Logística"],
+        ["1002", "Financeiro"],
+        ["1003", "Manutenção"],
+        ["1004", "Produção"],
+        ["1005", "TI"],
+        ["1006", "Logística"],
     ];
 
     for(var index=0; index<data.length; index++){
