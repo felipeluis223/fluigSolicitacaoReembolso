@@ -103,8 +103,8 @@
         <version>1</version>
         <sequence>2</sequence>
       </processStatePK>
-      <stateName>Aprovação</stateName>
-      <stateDescription>Aprovação</stateDescription>
+      <stateName>Validação</stateName>
+      <stateDescription>Validação</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -361,7 +361,7 @@
       <initialStateSequence>1</initialStateSequence>
       <finalStateSequence>2</finalStateSequence>
       <returnLabel></returnLabel>
-      <name></name>
+      <name>Solicitação</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -378,7 +378,7 @@
       <initialStateSequence>2</initialStateSequence>
       <finalStateSequence>3</finalStateSequence>
       <returnLabel></returnLabel>
-      <name></name>
+      <name>Validação aprovada</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -395,7 +395,7 @@
       <initialStateSequence>2</initialStateSequence>
       <finalStateSequence>9</finalStateSequence>
       <returnLabel></returnLabel>
-      <name></name>
+      <name>Validação negada</name>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
@@ -416,6 +416,9 @@
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
+      <movementTitle></movementTitle>
+      <movementDescription></movementDescription>
+      <movementAccessLinkDescription></movementAccessLinkDescription>
     </ProcessLink>
     <ProcessLink>
       <processLinkPK>
