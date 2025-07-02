@@ -1,1 +1,2 @@
-function enableFields(form){  }
+function enableFields(form){
+}

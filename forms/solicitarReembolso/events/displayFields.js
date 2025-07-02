@@ -19,18 +19,18 @@ function displayFields(form, customHTML) {
 
     // Desabilita todos os campos por padrão:
     var allFields = [
-        "idSolicitante",
-        "nomeSolicitante",
-        "valor",
-        "centroCusto",
-        "dataDespesa",
-        "justificativa",
-        "anexoDespesas",
-        "idCentroCusto",
-        "nomeCentroCusto",
-        "dataCentroCusto",
-        "radioTypesCentroCusto",
-        "justificativaCentroCusto",
+        "idSolicitante",   // CHECK
+        "nomeSolicitante", // CHECK
+        "valor",           // CHECk
+        "centroCusto",     // CHECK
+        "dataDespesa",     // CHECK
+        "justificativa",   // OPCIONAL
+        "anexoDespesas",   // CHECK
+        "idCentroCusto",   // CHECK
+        "nomeCentroCusto", // CHECK
+        "dataCentroCusto", // CHECK
+        "radioTypesCentroCusto", // CHECK
+        "justificativaCentroCusto", // OPCIONAL
         "idFinanceiro",
         "nomeFinanceiro",
         "dataFinanceiro",
@@ -38,7 +38,6 @@ function displayFields(form, customHTML) {
         "justificativaFinanceiro",
         "anexoComprovantePG"
     ];
-
     
     for (var i = 0; i < allFields.length; i++) {
         form.setEnabled(allFields[i], false);
@@ -52,6 +51,8 @@ function displayFields(form, customHTML) {
         
         form.setValue("idSolicitante", userLogin);
         form.setEnabled("idSolicitante", false);
+
+        // APLICAR DATA ATUAL NO FORM - CHAMAR FUNÇÃO GETDATA():
 
         form.setEnabled("valor", true);
         form.setEnabled("centroCusto", true);
@@ -110,4 +111,13 @@ function getUserName(login){
         return ds.getValue(0, "colleagueName");
     }
     return null;
+}
+
+function getDate(){
+    var now = new Date();
+    var day = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var month = now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
+    var year = now.getFullYear();
+    var formatDate = day + '/' + month + '/' + year;
+    return formatDate;
 }
