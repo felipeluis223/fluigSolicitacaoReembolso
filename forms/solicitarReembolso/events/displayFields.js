@@ -25,23 +25,30 @@ function displayFields(form, customHTML) {
         "dataFinanceiro", "radioTypesFinanceiro",
         "justificativaFinanceiro", "anexoComprovantePG"
     ];
-
+    
+    log.info("CHECKDATA - INICIO DO BLOQUEIO DE CAMPOS");
     for (var i = 0; i < allFields.length; i++) {
         form.setEnabled(allFields[i], false);
     }
+    log.info("CHECKDATA - FIM DO BLOQUEIO DE CAMPOS");
     
     // Etapa: Colaborador
     if ("grpColaboradores" in userGroup) {        
-        // Nome é obtido do sistema:
-        form.setValue("nomeSolicitante", userLogin);
+        // Nome e ID é obtido do sistema:
+        log.info("CHECKDATA - NOME OBTIDO: " + username);
+        form.setValue("nomeSolicitante", username);
         form.setEnabled("nomeSolicitante", false);
         
-        form.setEnabled("idSolicitante", true);
+        log.info("CHECKDATA - NOME OBTIDO: " + userLogin);
+        form.setValue("idSolicitante", userLogin);
+        form.setEnabled("idSolicitante", false);
+
         form.setEnabled("valor", true);
         form.setEnabled("centroCusto", true);
         form.setEnabled("dataDespesa", true);
         form.setEnabled("justificativa", true);
         form.setEnabled("anexoDespesas", true);
+        log.info("CHECKDATA - fim do processo");
     }
 
     // Etapa: Financeiro
@@ -58,10 +65,13 @@ function displayFields(form, customHTML) {
 
 // Obter o nome do usuário através do username:
 function getUserName(login){
+    log.info("CHECKDATA - INICIO DA REQUISIÇÃO DO NOME");
     var colleague = DatasetFactory.createConstraint("colleaguePK.colleagueId", login, login, ConstraintType.MUST);
-    var ds = DatsetFactory.getDataset("colleague", null, [colleague], null);
+    var ds = DatasetFactory.getDataset("colleague", null, [colleague], null);
     if(ds.rowsCount > 0){
+        log.info("CHECKDATA - FINAL DA REQUISIÇÃO DO NOME ENCONTRADO");
         return ds.getValue(0, "colleagueName");
     }
+    log.info("CHECKDATA - FINAL DA REQUISIÇÃO DO NOME - NULL");
     return null;
 }
