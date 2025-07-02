@@ -58,6 +58,30 @@ function displayFields(form, customHTML) {
         form.setEnabled("dataDespesa", true);
         form.setEnabled("justificativa", true);
         form.setEnabled("anexoDespesas", true);
+        
+        // Desabilitando os campos novamente
+        if((form.getValue("radioTypesFinanceiro") == "success") || (form.getValue("radioTypesFinanceiro") == "danger")){
+            form.setEnabled("anexoDespesas", false);
+
+            form.setEnabled("valor", false);
+            form.setEnabled("centroCusto", false);
+            form.setEnabled("dataDespesa", false);
+            form.setEnabled("justificativa", false);
+            form.setEnabled("anexoDespesas", false);
+        }
+
+    }
+
+    if("grpCentroCusto" in userGroup){
+        form.setValue("nomeCentroCusto", username);
+        form.setEnabled("nomeCentroCusto", false);
+
+        form.setValue("idCentroCusto", username);
+        form.setEnabled("idCentroCusto", false);
+
+        form.setEnabled("dataCentroCusto", true);
+        form.setEnabled("radioTypesCentroCusto", true);
+        form.setEnabled("justificativaCentroCusto", true);
     }
 
     // Etapa: Financeiro

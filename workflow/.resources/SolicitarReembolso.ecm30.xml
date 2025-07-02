@@ -205,10 +205,10 @@
         <companyId>1</companyId>
         <processId>SolicitarReembolso</processId>
         <version>1</version>
-        <sequence>8</sequence>
+        <sequence>20</sequence>
       </processStatePK>
-      <stateName>Resultado</stateName>
-      <stateDescription>Resultado</stateDescription>
+      <stateName>Confirmação de Recebimento</stateName>
+      <stateDescription>Confirmação de Recebimento</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -230,8 +230,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>950</positionX>
-      <positionY>128</positionY>
+      <positionX>960</positionX>
+      <positionY>130</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,8 +328,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1220</positionX>
-      <positionY>140</positionY>
+      <positionX>1350</positionX>
+      <positionY>142</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -426,7 +426,7 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>8</initialStateSequence>
+      <initialStateSequence>20</initialStateSequence>
       <finalStateSequence>14</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -444,7 +444,7 @@
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>3</initialStateSequence>
-      <finalStateSequence>8</finalStateSequence>
+      <finalStateSequence>20</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -560,8 +560,8 @@
         <linkSequence>19</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>860</positionX>
-      <positionY>158</positionY>
+      <positionX>867</positionX>
+      <positionY>160</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
