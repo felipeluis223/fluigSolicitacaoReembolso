@@ -65,6 +65,52 @@
 		</div>
 	</div>
 
+	<!-- Etapa do Centro de Custo -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title">Análise - Centro de Custo</h2>
+		</div>
+		<div class="panel-body">
+			<span class="">Revise os dados da solicitação e valide as informações conforme as diretrizes do centro de custo responsável.</span>
+			<section class="row form-group fs-xl-margin-top">
+				<!-- 1º Linha -->
+				<div class="col-md-2">
+					<label for="idCentroCusto">ID do responsável:</label>
+					<input class="form-control" type="text" id="id" name="idCentroCusto">
+				</div>
+				<div class="col-md-3">
+					<label for="nomeCentroCusto">Nome completo do responsável:</label>
+					<input class="form-control" type="text" id="nomeCentroCusto" name="nomeCentroCusto" placeholder="Ex.: Maria Eduarda Silva">
+				</div>
+				<div class="col-md-2">
+					<label for="dataCentroCusto">Data da análise:</label>
+					<input class="form-control" type="date" id="dataCentroCusto" name="dataCentroCusto">
+				</div>
+				<div class="col-md-3">
+					<label>Reembolso:</label>
+					<div class="fs-display-flex fs-flex-direction-row fs-md-gap">
+						<div class="custom-radio custom-radio-danger">
+							<input type="radio" name="radioTypesCentroCusto" value="danger" id="radioDanger">
+							<label for="radioDanger">Reprovado</label>
+						</div>
+						<div class="custom-radio custom-radio-success">
+							<input type="radio" name="radioTypesCentroCusto" value="success" id="radioSuccess">
+							<label for="radioSuccess">Aprovado</label>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 2º Linha -->
+			<section class="row form-group" style="display: none;">
+				<div class="col-md-12">
+					<label for="justificativaCentroCusto">Justificativa:</label>
+					<textarea class="form-control" id="justificativaCentroCusto" name="justificativaCentroCusto" rows="2"></textarea>				
+				</div>
+			</section>			
+		</div>
+	</div>
+
 	<!-- Etapa do Financeiro -->
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -83,7 +129,7 @@
 					<input class="form-control" type="text" id="nomeFinanceiro" name="nomeFinanceiro" placeholder="Ex.: Maria Eduarda Silva">
 				</div>
 				<div class="col-md-2">
-					<label for="dataFinanceiro">Data da validação:</label>
+					<label for="dataFinanceiro">Data do pagamento:</label>
 					<input class="form-control" type="date" id="dataFinanceiro" name="dataFinanceiro">
 				</div>
 				<div class="col-md-3">

@@ -63,7 +63,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="76" x="570" y="434"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="106" height="76" x="570" y="426"/>
       <link businessObjects="task3"/>
       <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.3 /0/@connections.5" incomingConnections="/0/@connections.1"/>
       <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" referencedGraphicsAlgorithm="/0/@children.5/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.51">
@@ -117,7 +117,7 @@
       </children>
     </children>
     <children xsi:type="pi:ContainerShape" visible="true" active="true">
-      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="1320" y="140">
+      <graphicsAlgorithm xsi:type="al:Ellipse" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="35" height="35" x="1220" y="140">
         <graphicsAlgorithmChildren xsi:type="al:Ellipse" lineWidth="3" transparency="0.0" width="35" height="35" style="/0/@styles.74"/>
       </graphicsAlgorithm>
       <link businessObjects="endevent14"/>
@@ -2816,7 +2816,7 @@
           <points x="-8" before="3" after="3"/>
         </graphicsAlgorithm>
       </connectionDecorators>
-      <bendpoints x="712" y="471"/>
+      <bendpoints x="715" y="463"/>
       <bendpoints x="860" y="158"/>
     </connections>
     <colors red="227" green="238" blue="249"/>
@@ -2860,5 +2860,5 @@
   <bpmn2:BpmnSwimLane id="bpmnswimlane17" name="Centro de Custo" cores="E4E4E4"/>
   <bpmn2:BpmnSwimLane id="bpmnswimlane18" name="Financeiro" cores="CECECE"/>
   <bpmn2:BpmnSwimLane id="swimlane16" name="Solicitante" cores="F0F0F0"/>
-  <bpmn2:SequenceFlow id="flow19" name="" sourceRef="task3" targetRef="task8" atividadeFluxo=""/>
+  <bpmn2:SequenceFlow id="flow19" name="" sourceRef="task3" targetRef="task8" atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/>"/>
 </xmi:XMI>

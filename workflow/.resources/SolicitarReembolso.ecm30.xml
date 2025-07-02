@@ -179,7 +179,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>570</positionX>
-      <positionY>434</positionY>
+      <positionY>426</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,7 +328,7 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1320</positionX>
+      <positionX>1220</positionX>
       <positionY>140</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -549,8 +549,8 @@
         <linkSequence>19</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>712</positionX>
-      <positionY>471</positionY>
+      <positionX>715</positionX>
+      <positionY>463</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
