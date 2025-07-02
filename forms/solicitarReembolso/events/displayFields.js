@@ -1,6 +1,7 @@
 function displayFields(form, customHTML) {
-    var user = getValue("WKUser");
-    var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", user, user, ConstraintType.MUST) ];
+    var userLogin = getValue("WKUser");
+    var username = getUserName(userLogin);
+    var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", userLogin, userLogin, ConstraintType.MUST) ];
     var groupDataset = DatasetFactory.getDataset("colleagueGroup", null, constraints, null);
     
     var groups = ["grpColaboradores", "grpCentroCusto", "grpFinanceiro"];
@@ -16,14 +17,26 @@ function displayFields(form, customHTML) {
         }
     }
 
+    // Desabilita todos os campos por padrão:
+    var allFields = [
+        "idSolicitante", "nomeSolicitante", "valor",
+        "centroCusto", "dataDespesa", "justificativa",
+        "anexoDespesas", "idFinanceiro", "nomeFinanceiro",
+        "dataFinanceiro", "radioTypesFinanceiro",
+        "justificativaFinanceiro", "anexoComprovantePG"
+    ];
+
+    for (var i = 0; i < allFields.length; i++) {
+        form.setEnabled(allFields[i], false);
+    }
+    
     // Etapa: Colaborador
     if ("grpColaboradores" in userGroup) {        
-        // ID e Nome com os dados obtidos do sistema:
-        form.setValue("idSolicitante", user);        
-        form.setEnabled("idSolicitante", false);
-        form.setValue("nomeSolicitante", user);
+        // Nome é obtido do sistema:
+        form.setValue("nomeSolicitante", userLogin);
         form.setEnabled("nomeSolicitante", false);
         
+        form.setEnabled("idSolicitante", true);
         form.setEnabled("valor", true);
         form.setEnabled("centroCusto", true);
         form.setEnabled("dataDespesa", true);
@@ -40,4 +53,15 @@ function displayFields(form, customHTML) {
         form.setEnabled("justificativaFinanceiro", true);
         form.setEnabled("anexoComprovantePG", true);
     }
+}
+
+
+// Obter o nome do usuário através do username:
+function getUserName(login){
+    var colleague = DatasetFactory.createConstraint("colleaguePK.colleagueId", login, login, ConstraintType.MUST);
+    var ds = DatsetFactory.getDataset("colleague", null, [colleague], null);
+    if(ds.rowsCount > 0){
+        return ds.getValue(0, "colleagueName");
+    }
+    return null;
 }
