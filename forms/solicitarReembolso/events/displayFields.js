@@ -26,20 +26,16 @@ function displayFields(form, customHTML) {
         "justificativaFinanceiro", "anexoComprovantePG"
     ];
     
-    log.info("CHECKDATA - INICIO DO BLOQUEIO DE CAMPOS");
     for (var i = 0; i < allFields.length; i++) {
         form.setEnabled(allFields[i], false);
     }
-    log.info("CHECKDATA - FIM DO BLOQUEIO DE CAMPOS");
     
     // Etapa: Colaborador
     if ("grpColaboradores" in userGroup) {        
         // Nome e ID é obtido do sistema:
-        log.info("CHECKDATA - NOME OBTIDO: " + username);
         form.setValue("nomeSolicitante", username);
         form.setEnabled("nomeSolicitante", false);
         
-        log.info("CHECKDATA - NOME OBTIDO: " + userLogin);
         form.setValue("idSolicitante", userLogin);
         form.setEnabled("idSolicitante", false);
 
@@ -48,13 +44,18 @@ function displayFields(form, customHTML) {
         form.setEnabled("dataDespesa", true);
         form.setEnabled("justificativa", true);
         form.setEnabled("anexoDespesas", true);
-        log.info("CHECKDATA - fim do processo");
     }
 
     // Etapa: Financeiro
     if ("grpFinanceiro" in userGroup) {
-        form.setEnabled("idFinanceiro", true);
-        form.setEnabled("nomeFinanceiro", true);
+
+        // Nome e ID é obtido do sistema:
+        form.setValue("nomeFinanceiro", username);
+        form.setEnabled("nomeFinanceiro", false);
+        
+        form.setValue("idFinanceiro", userLogin);
+        form.setEnabled("idFinanceiro", false);
+
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypesFinanceiro", true);
         form.setEnabled("justificativaFinanceiro", true);
@@ -65,13 +66,10 @@ function displayFields(form, customHTML) {
 
 // Obter o nome do usuário através do username:
 function getUserName(login){
-    log.info("CHECKDATA - INICIO DA REQUISIÇÃO DO NOME");
     var colleague = DatasetFactory.createConstraint("colleaguePK.colleagueId", login, login, ConstraintType.MUST);
     var ds = DatasetFactory.getDataset("colleague", null, [colleague], null);
     if(ds.rowsCount > 0){
-        log.info("CHECKDATA - FINAL DA REQUISIÇÃO DO NOME ENCONTRADO");
         return ds.getValue(0, "colleagueName");
     }
-    log.info("CHECKDATA - FINAL DA REQUISIÇÃO DO NOME - NULL");
     return null;
 }
