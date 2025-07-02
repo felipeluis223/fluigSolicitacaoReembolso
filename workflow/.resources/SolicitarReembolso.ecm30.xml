@@ -4,7 +4,7 @@
       <companyId>1</companyId>
       <processId>SolicitarReembolso</processId>
     </processDefinitionPK>
-    <processDescription>SolicitarReembolso</processDescription>
+    <processDescription>Solicitar reembolso</processDescription>
     <instruction></instruction>
     <active>true</active>
     <publicProcess>false</publicProcess>
@@ -27,8 +27,8 @@
   <ProcessDefinitionVersion>
     <processDefinitionVersionPK>
       <companyId>1</companyId>
-      <processId>SolicitarReembolso</processId>
-      <version>4</version>
+      <processId>Solicitar reembolso</processId>
+      <version>1</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>85</formId>
@@ -60,7 +60,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpColaborador&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;grpColaboradores&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -231,7 +231,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>950</positionX>
-      <positionY>434</positionY>
+      <positionY>426</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -333,8 +333,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>600</positionX>
-      <positionY>140</positionY>
+      <positionX>605</positionX>
+      <positionY>142</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -526,22 +526,6 @@
   <list/>
   <list>
     <SwimLane>
-      <color>F0F0F0</color>
-      <height>151</height>
-      <width>1311</width>
-      <positionX>90</positionX>
-      <positionY>82</positionY>
-      <stateName>Solicitante</stateName>
-      <type>2</type>
-      <parentSequence>0</parentSequence>
-      <swimLanePK>
-        <companyId>1</companyId>
-        <processId>SolicitarReembolso</processId>
-        <version>1</version>
-        <sequence>1</sequence>
-      </swimLanePK>
-    </SwimLane>
-    <SwimLane>
       <color>E4E4E4</color>
       <height>151</height>
       <width>1311</width>
@@ -554,7 +538,7 @@
         <companyId>1</companyId>
         <processId>SolicitarReembolso</processId>
         <version>1</version>
-        <sequence>2</sequence>
+        <sequence>1</sequence>
       </swimLanePK>
     </SwimLane>
     <SwimLane>
@@ -564,6 +548,22 @@
       <positionX>90</positionX>
       <positionY>382</positionY>
       <stateName>Financeiro</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>SolicitarReembolso</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>F0F0F0</color>
+      <height>151</height>
+      <width>1311</width>
+      <positionX>90</positionX>
+      <positionY>82</positionY>
+      <stateName>Solicitante</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
       <swimLanePK>
@@ -581,7 +581,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SolicitarReembolso</processId>
-        <version>4</version>
+        <version>1</version>
         <linkSequence>5</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -592,7 +592,7 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SolicitarReembolso</processId>
-        <version>4</version>
+        <version>1</version>
         <linkSequence>6</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -603,23 +603,12 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>SolicitarReembolso</processId>
-        <version>4</version>
+        <version>1</version>
         <linkSequence>12</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>400</positionX>
-      <positionY>157</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>SolicitarReembolso</processId>
-        <version>4</version>
-        <linkSequence>13</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>700</positionX>
-      <positionY>157</positionY>
+      <positionX>396</positionX>
+      <positionY>159</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

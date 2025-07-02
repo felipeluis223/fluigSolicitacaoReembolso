@@ -1,43 +1,44 @@
-function displayFields(form,customHTML){
-	var user = form.getValue("WKUser");
-    var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", user, user,  ConstraintType.MUST) ];
+function displayFields(form, customHTML) {
+    var user = getValue("WKUser");
+    var constraints = [ DatasetFactory.createConstraint("colleagueGroupPK.colleagueId", user, user, ConstraintType.MUST) ];
     var groupDataset = DatasetFactory.getDataset("colleagueGroup", null, constraints, null);
     
-    // Grupos envolvidos no processo:
-    var groups = [
-        "grpColaborador", // MariaTeste
-        "grpCentroCusto", // FelipeTeste
-        "grpFinanceiro"   // JanainaTeste e CassandraTeste
-    ];
-
-    // Percorrer os grupos do usuário:
+    var groups = ["grpColaboradores", "grpCentroCusto", "grpFinanceiro"];
     var userGroup = {};
+
+    log.info("CHECKDATA 1");
     for (var i = 0; i < groupDataset.rowsCount; i++) {
+        log.info("CHECKDATA 1.1");
         var groupId = groupDataset.getValue(i, "colleagueGroupPK.groupId");
         for (var index = 0; index < groups.length; index++) {
+            log.info("CHECKDATA 1.2");
             if (groupId == groups[index]) {
+                log.info("CHECKDATA 1.2.1");
                 userGroup[groups[index]] = groupId;
             }
         }
     }
 
-    // Obter a data atual:
-    function getDate(){
+    log.info("CHECKDATA 2");
+    function getDate() {
         var now = new Date();
         var day = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
         var month = now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1) : now.getMonth() + 1;
-        var year = now.getFullYear();
-        var formatDate = day + '/' + month + '/' + year;
-        return formatDate;
+        return day + '/' + month + '/' + now.getFullYear();
     }
 
-    // Habilitando os campos necessários para a etapa do solicitante:
-    if("grpColaborador" in userGroup){
+    // Etapa: Colaborador
+    if ("grpColaboradores" in userGroup) {
+        log.info("CHECKDATA 3 - Colaborador");
+        log.info("HTML");
+        log.info("=================");
+        log.info(form);
+        log.info("=================");
         form.setValue("idSolicitante", user);
-        form.setEnabled("idSolicitante", false);
+        form.setEnabled("idSolicitante", true);
 
         form.setValue("nomeSolicitante", user);
-        form.setEnabled("nomeSolicitante", false);
+        form.setEnabled("nomeSolicitante", true);
 
         form.setEnabled("valor", true);
         form.setEnabled("centroCusto", true);
@@ -46,13 +47,11 @@ function displayFields(form,customHTML){
         form.setEnabled("anexoDespesas", true);
     }
 
-    // Habilitando os campos necessários para a etapa do financeiro:
-    if("grpFinanceiro" in userGroup){
-        user = getValue("WKUser");
-
+    // Etapa: Financeiro
+    if ("grpFinanceiro" in userGroup) {
+        log.info("CHECKDATA 3 - Financeiro");
         form.setEnabled("idFinanceiro", true);
         form.setEnabled("nomeFinanceiro", true);
-
         form.setEnabled("dataFinanceiro", true);
         form.setEnabled("radioTypesFinanceiro", true);
         form.setEnabled("justificativaFinanceiro", true);
